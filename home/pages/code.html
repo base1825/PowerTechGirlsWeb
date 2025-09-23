@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering The Nation</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="hero">
+    <nav id="nav" class="nav">
+      <h1 class="logo">EMPOWERING THE NATION</h1>
+      <ul class="nav-links">
+       <nav class="nav">
+ 
+  <ul class="nav-links">
+    
+    <li><a href="6month.html">Six-Month Courses</a></li>
+    <li><a href="6week.html">Six-Week Courses</a></li>
+    <li><a href="fees.html">Calculation</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+      </ul>
+    </nav>
+
+    <div class="hero-text">
+      <h2>"Upskilling Today,<br> Empowering Tomorrow"</h2>
+      <p>We equip domestic workers and gardeners with practical training that makes them more employable, more confident, and better prepared to earn higher incomes or start their own businesses.</p>
+      <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-chevron-down"></i> Scroll to see more
+      </button>
+    </div>
+  </header>
+
+  <!-- COURSES -->
+  <section class="course" >
+    <div class="course-grid">
+      <a href="6month.html" class="course-card">
+      <img src="images/garder.jpg" alt="6 month course">
+      <h3>Six-Month Courses</h3>
+      </a>
+      <a href="6week.html" class="course-card">
+
+      <img src="images/aid.jpg" alt="6 week course">
+      <h3>Six-Week Courses</h3>
+      </a>
+    </div> 
+  </section>
+
+  <!-- ABOUT US -->
+  <section class="about-us" id="about">
+    <h1>About Us</h1>
+    <div class="about-container">
+      <img src="images/rebede.jpg" alt="Founder Precious Radebe" class="founder-img">
+      <div class="about-text">
+        <p>
+          Founded by <strong>Precious Radebe</strong>, we empower domestic workers and gardeners 
+          with practical skills to boost employability, earn higher wages, and pursue entrepreneurial opportunities. 
+          <span id="dots">...</span>
+          <span id="more">
+            Our training helps participants grow professionally while providing employers 
+            with more skilled, capable staff—transforming lives, one skill at a time. 
+            Our mission is to enhance employability and open up new opportunities for growth. 
+            By providing hands-on, marketable skills, we help domestic workers and gardeners increase their value in the job market, earn higher wages, and even pursue entrepreneurial ventures using their newly acquired expertise.
+            <br><br>
+            Through our comprehensive training programs, employers benefit from more skilled, professional, and capable staff, while participants gain the confidence and knowledge to elevate their careers. We are committed to transforming lives, one skill at a time, and fostering a community where talent is recognized, valued, and celebrated.
+          </span>
+        </p>
+        <button onclick="toggleAbout()" id="btn-see-more" class="btn-see-more">See More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <h1>What People Say</h1>
+    <div class="testimonial">
+      <i class="fas fa-quote-left"></i>
+      <p>"The courses offered here have transformed my career. The instructors are top-notch and the content is always relevant."</p>
+      <h4>- Alex Johnson</h4>
+    </div>
+    <div class="testimonial">
+      <i class="fas fa-quote-left"></i>
+      <p>"I never thought I could learn so much in such a short time. The hands-on approach made all the difference."</p>
+      <h4>- Maria Garcia</h4>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <h1>We are proud of our values</h1>
+    <div class="values-list">
+      <span>#Empowering</span>
+      <span>#Growth</span>
+      <span>#Opportunity</span>
+      <span>#Community</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-column">
+      <h3>Contact Info</h3>
+      <p>EmpoweringThenation.com</p>
+      <p>+27 356786687</p>
+    </div>
+    <div class="footer-column">
+      <h3>Social Media</h3>
+      <p>Instagram</p>
+      <p>Facebook</p>
+      <p>LinkedIn</p>
+      <p>WhatsApp</p>
+    </div>
+    <div class="footer-column">
+      <h3>Newsletter Sign-up</h3>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleAbout() {
+      let dots = document.getElementById("dots");
+      let moreText = document.getElementById("more");
+      let btn = document.getElementById("btn-see-more");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btn.innerHTML = "See More";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btn.innerHTML = "See Less";
+        moreText.style.display = "inline";
+      }
+    }
+  </script>
+</body>
+</html>
