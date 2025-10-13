@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotation Calculator</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="code.html">Home</a></li>
+        <li><a href="6month.html">Six-Month Courses</a></li>
+        <li><a href="6week.html">Six-Week Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>COURSE QUOTATION</h1>
+
+  <form id="quoteForm">
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+    <h2>Select Courses:</h2>
+
+    <input type="checkbox" id="sewing" name="course" value="1500">
+    <label for="sewing">SEWING (R1500)</label><br>
+
+    <input type="checkbox" id="childminding" name="course" value="750">
+    <label for="childminding">CHILD MINDING (R750)</label><br>
+
+    <input type="checkbox" id="cooking" name="course" value="750">
+    <label for="cooking">COOKING (R750)</label><br>
+
+    <input type="checkbox" id="lifeskills" name="course" value="1500">
+    <label for="lifeskills">LIFE SKILLS (R1500)</label><br><br>
+
+    <button type="button" onclick="generateQuote()">Generate Quotation</button>
+  </form>
+
+  <div id="quoteBox" style="display:none; margin-top:30px; border:2px solid #ccc; padding:20px; border-radius:10px;">
+    <h2>Quotation Summary</h2>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+    <p><strong>Selected Courses:</strong></p>
+    <ul id="selectedCourses"></ul>
+    <p><strong>Total Amount:</strong> R<span id="totalAmount">0</span></p>
+  </div>
+
+  <script>
+    function generateQuote() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+      let checkboxes = document.querySelectorAll('input[name="course"]:checked');
+      let total = 0;
+      let selectedCourses = [];
+
+      checkboxes.forEach((checkbox) => {
+        total += parseInt(checkbox.value);
+        selectedCourses.push(checkbox.nextElementSibling.textContent);
+      });
+
+      if (selectedCourses.length === 0) {
+        alert("Please select at least one course.");
+        return;
+      }
+
+      document.getElementById("displayName").textContent = name;
+      document.getElementById("displayEmail").textContent = email;
+      document.getElementById("displayPhone").textContent = phone;
+
+      let list = document.getElementById("selectedCourses");
+      list.innerHTML = "";
+      selectedCourses.forEach((course) => {
+        let li = document.createElement("li");
+        li.textContent = course;
+        list.appendChild(li);
+      });
+
+      document.getElementById("totalAmount").textContent = total;
+      document.getElementById("quoteBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
