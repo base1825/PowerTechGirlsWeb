@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quotation Calculator | Empowering The Nation</title>
-
-  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  <link rel="icon" href="../images/logo.png" type="image/x-icon">
   <style>
     * {
       margin: 0;
@@ -15,20 +15,16 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
-
     body {
       background-color: #ffffff;
       color: #333;
       line-height: 1.6;
       padding-bottom: 60px;
     }
-
     a {
       text-decoration: none;
       color: inherit;
     }
-
-    /* NAVIGATION */
     .nav {
       background-color: #0b2239;
       display: flex;
@@ -37,37 +33,29 @@
       padding: 15px 8%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
     .logo {
       color: #4CAF50;
       font-size: 1.4rem;
       font-weight: 600;
     }
-
     .nav-links {
       list-style: none;
       display: flex;
       gap: 2rem;
     }
-
     .nav-links li a {
       color: #fff;
       font-weight: 500;
       transition: color 0.3s ease;
     }
-
     .nav-links li a:hover {
       color: #4CAF50;
     }
-
-    /* PAGE TITLE */
     h1 {
       text-align: center;
       margin: 40px 0 20px;
       color: #4CAF50;
     }
-
-    /* FORM */
     form {
       max-width: 600px;
       margin: 0 auto;
@@ -76,7 +64,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
-
     form input[type="text"],
     form input[type="email"],
     form input[type="tel"] {
@@ -86,11 +73,9 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-
     form input[type="checkbox"] {
       margin-right: 10px;
     }
-
     form button {
       background-color: #4CAF50;
       color: #fff;
@@ -101,12 +86,9 @@
       font-size: 1rem;
       margin-top: 20px;
     }
-
     form button:hover {
       background-color: #45a049;
     }
-
-    /* QUOTE BOX */
     #quoteBox {
       max-width: 600px;
       margin: 30px auto;
@@ -115,39 +97,32 @@
       border-radius: 10px;
       background-color: #e8f5e9;
     }
-
     #quoteBox h2 {
       color: #0b2239;
       margin-bottom: 15px;
     }
-
     #quoteBox p,
     #quoteBox ul {
       font-size: 1rem;
       margin-bottom: 10px;
     }
-
     #quoteBox ul {
       list-style: disc;
       padding-left: 20px;
     }
-
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
         align-items: flex-start;
       }
-
       .nav-links {
         flex-direction: column;
         gap: 1rem;
         margin-top: 10px;
       }
-
       form {
         padding: 15px;
       }
-
       #quoteBox {
         padding: 15px;
       }
@@ -155,42 +130,34 @@
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav class="nav">
     <h1 class="logo">Empowering The Nation</h1>
     <ul class="nav-links">
       <li><a href="Home.html">Home</a></li>
       <li><a href="6month.html">Six-Month Courses</a></li>
       <li><a href="6week.html">Six-Week Courses</a></li>
+      <li><a href="Enquaries.html">Enquaries</a></li>
+      <li><a href="registration.html">Registration</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- PAGE TITLE -->
-  <h1>Course Quotation</h1>
 
-  <!-- FORM -->
+  <h1>Course Quotation</h1>
   <form id="quoteForm">
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
     <input type="email" id="email" name="email" placeholder="Enter your email" required>
     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
     <h2>Select Courses:</h2>
-
     <label><input type="checkbox" id="sewing" name="course" value="1500"> SEWING (R1500)</label><br>
     <label><input type="checkbox" id="childminding" name="course" value="750"> CHILD MINDING (R750)</label><br>
     <label><input type="checkbox" id="cooking" name="course" value="750"> COOKING (R750)</label><br>
     <label><input type="checkbox" id="lifeskills" name="course" value="1500"> LIFE SKILLS (R1500)</label><br>
     <label><input type="checkbox" id="landscaping" name="course" value="750"> LANDSCAPING (R750)</label><br>
     <label><input type="checkbox" id="firstaid" name="course" value="1500"> FIRST AID (R1500)</label><br>
-    <Label><input type="checkbox" id="maintanace" name="course" value="750"> MAINTANCE (R750)</Label><br>
-
-
+    <label><input type="checkbox" id="maintenance" name="course" value="750"> MAINTENANCE (R750)</label><br>
     <button type="button" onclick="generateQuote()">Generate Quotation</button>
   </form>
-
-  <!-- QUOTE BOX -->
   <div id="quoteBox" style="display:none;">
     <h2>Quotation Summary</h2>
     <p><strong>Name:</strong> <span id="displayName"></span></p>
@@ -201,7 +168,6 @@
     <p><strong>Total Amount:</strong> R<span id="totalAmount">0</span></p>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     function generateQuote() {
       let name = document.getElementById("name").value;
@@ -210,21 +176,19 @@
       let checkboxes = document.querySelectorAll('input[name="course"]:checked');
       let total = 0;
       let selectedCourses = [];
-
       checkboxes.forEach((checkbox) => {
         total += parseInt(checkbox.value);
-        selectedCourses.push(checkbox.nextSibling.textContent.trim());
+        // Get label text for the course
+        let label = checkbox.parentNode;
+        selectedCourses.push(label.textContent.replace(/^[\s\S]*\)/, '').trim() ? label.textContent.trim() : label.textContent.trim());
       });
-
       if (selectedCourses.length === 0) {
         alert("Please select at least one course.");
         return;
       }
-
       document.getElementById("displayName").textContent = name;
       document.getElementById("displayEmail").textContent = email;
       document.getElementById("displayPhone").textContent = phone;
-
       let list = document.getElementById("selectedCourses");
       list.innerHTML = "";
       selectedCourses.forEach((course) => {
@@ -232,7 +196,6 @@
         li.textContent = course;
         list.appendChild(li);
       });
-
       document.getElementById("totalAmount").textContent = total;
       document.getElementById("quoteBox").style.display = "block";
     }
