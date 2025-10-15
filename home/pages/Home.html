@@ -447,19 +447,90 @@
       <img src="../images/rebede.jpg" alt="Founder Precious Radebe" class="founder-img" />
       <div class="about-text">
         <p>
-          Founded by <strong>Precious Radebe</strong>, we empower domestic
-          workers and gardeners with practical skills to boost employability,
-          earn higher wages, and pursue entrepreneurial opportunities.
-          <span id="dots">...</span>
-          <span id="more" style="display: none;">
-            Our training helps participants grow professionally while providing
-            employers with more skilled, capable staff—transforming lives, one
-            skill at a time.
-          </span>
-        </p>
-        <button onclick="toggleAbout()" id="btn-see-more" class="btn-see-more">
-          See More
-        </button>
+         <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering Domestic Workers & Gardeners</title>
+  <style>
+    /* Style for the text and button */
+    .empowerment-program {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    #more {
+      display: none;
+    }
+
+    /* Styling for the See More button */
+    #see-more-btn {
+      color: #27b964;
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    #see-more-btn:hover {
+      color: #022207;
+      text-decoration: none;
+    }
+
+    /* Optional: Add a smooth transition for text visibility */
+    #more {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="empowerment-program">
+    <h2>Empowering Domestic Workers & Gardeners</h2>
+    <p>Founded by <strong>Precious Radebe</strong>, our organization is committed to empowering domestic workers and gardeners by providing them with the practical skills necessary to thrive in an ever-evolving job market. Our primary goal is to enhance employability, facilitate access to higher-paying opportunities, and help individuals pursue entrepreneurial ventures that lead to greater financial independence and security.</p>
+
+    <p>We recognize that the domestic work and gardening sectors are vital to the smooth running of households and businesses, yet often, these workers face limited access to training and development. Our comprehensive training programs are designed to address this gap by offering participants specialized skills that not only improve their work performance but also increase their chances of securing stable, well-paid jobs. Whether it’s through advanced cleaning techniques, landscaping design, or effective communication skills, our training equips domestic workers and gardeners with the tools they need to succeed.</p>
+ <div id="more">
+    <p>One of the key benefits of our initiative is the ability to provide participants with marketable skills that are in demand across various industries. As the workforce becomes more competitive, having specialized knowledge can make all the difference in job security and career advancement. Through our courses, we enable workers to improve their chances of earning a higher wage, thus improving their financial standing and the well-being of their families.</p>
+
+    <p>But our impact doesn’t stop with individual workers-it extends to employers as well. By offering training that enhances the skill set of workers, we provide employers with access to more capable and reliable staff. This creates a win-win situation where both the employer and employee benefit. Employers gain employees who are better equipped to handle their responsibilities with efficiency, attention to detail, and professionalism. In return, workers have more opportunities for career growth and job satisfaction, leading to a more positive work environment overall.</p>
+
+    <!-- Hidden additional text -->
+   
+      <p>The transformation that occurs through our training extends beyond just professional development-it is a life-changing experience. The knowledge and confidence gained through our programs empower individuals to take control of their futures, pursue entrepreneurial ventures, and become more self-reliant. We envision a future where domestic workers and gardeners are valued not just for their labor, but for their expertise and skills, and where these workers have access to the same opportunities for growth and prosperity as any other professional.</p>
+
+      <p>Our commitment to transformation is rooted in the belief that when individuals are given the opportunity to learn and grow, they can break the cycle of poverty and create better lives for themselves and their families. Every day, we witness the impact of our training programs as they help individuals become more than just workers-they become professionals with pride in their work and the skills to succeed.</p>
+
+      <p>Through our organization, we are helping to change the narrative surrounding domestic work and gardening. These professions are essential, and through our training, we are providing workers with the recognition, respect, and opportunities they deserve. By changing lives, one skill at a time, we are contributing to a future where every worker has the tools they need to succeed, regardless of their background or previous opportunities.</p>
+    </div>
+
+    <!-- Button to show more -->
+    <p><span id="see-more-btn" onclick="toggleText()">See More</span></p>
+  </div>
+
+  <script>
+    // Function to toggle the visibility of the extra content
+    function toggleText() {
+      var moreText = document.getElementById("more");
+      var seeMoreBtn = document.getElementById("see-more-btn");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        seeMoreBtn.textContent = "See Less";  // Change button text to "See Less"
+      } else {
+        moreText.style.display = "none";
+        seeMoreBtn.textContent = "See More";  // Change button text back to "See More"
+      }
+    }
+  </script>
+</body>
+</html>
+
       </div>
     </div>
   </section>

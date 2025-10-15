@@ -17,12 +17,16 @@
       font-family: "Poppins", sans-serif;
       background-color: #f7f7f7;
       color: #333;
+      display: flex; /* Make the body a flex container */
+      flex-direction: column; /* Stack content vertically */
+      height: 100vh; /* Ensure the body takes up full height */
     }
 
     main {
       padding: 3rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
+      flex-grow: 1; /* Allow the main content to grow and fill space */
     }
 
     h1, h2 {
@@ -168,13 +172,16 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
+    /* ------------------ */
+    /* Footer */
+    /* ------------------ */
     footer {
       background: #0a3d15;
       color: #fff;
       text-align: center;
       padding: 1rem 0;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: auto; /* Push footer to the bottom */
     }
   </style>
 </head>
@@ -187,9 +194,9 @@
         <a href="index.html">Empowering The Nation<span></span></a>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="six-month.html">Six-Month Courses</a></li>
-        <li><a href="calculation.html">Calculation</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="6month.html">Six-Month Courses</a></li>
+        <li><a href="fees.html">Calculation</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="menu-toggle">
