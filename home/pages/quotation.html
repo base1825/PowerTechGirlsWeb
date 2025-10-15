@@ -1,50 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quotation Calculator</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotation Calculator | Empowering The Nation</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      background-color: #0b2239;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      color: #4CAF50;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #4CAF50;
+    }
+
+    /* PAGE TITLE */
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #4CAF50;
+    }
+
+    /* FORM */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    form button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+
+    /* QUOTE BOX */
+    #quoteBox {
+      max-width: 600px;
+      margin: 30px auto;
+      border: 2px solid #4CAF50;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #e8f5e9;
+    }
+
+    #quoteBox h2 {
+      color: #0b2239;
+      margin-bottom: 15px;
+    }
+
+    #quoteBox p,
+    #quoteBox ul {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    #quoteBox ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 10px;
+      }
+
+      form {
+        padding: 15px;
+      }
+
+      #quoteBox {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="code.html">Home</a></li>
-        <li><a href="6month.html">Six-Month Courses</a></li>
-        <li><a href="6week.html">Six-Week Courses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <h1 class="logo">Empowering The Nation</h1>
+    <ul class="nav-links">
+      <li><a href="code.html">Home</a></li>
+      <li><a href="6month.html">Six-Month Courses</a></li>
+      <li><a href="6week.html">Six-Week Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <h1>COURSE QUOTATION</h1>
+  <!-- PAGE TITLE -->
+  <h1>Course Quotation</h1>
 
+  <!-- FORM -->
   <form id="quoteForm">
-    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
     <h2>Select Courses:</h2>
 
-    <input type="checkbox" id="sewing" name="course" value="1500">
-    <label for="sewing">SEWING (R1500)</label><br>
-
-    <input type="checkbox" id="childminding" name="course" value="750">
-    <label for="childminding">CHILD MINDING (R750)</label><br>
-
-    <input type="checkbox" id="cooking" name="course" value="750">
-    <label for="cooking">COOKING (R750)</label><br>
-
-    <input type="checkbox" id="lifeskills" name="course" value="1500">
-    <label for="lifeskills">LIFE SKILLS (R1500)</label><br><br>
+    <label><input type="checkbox" id="sewing" name="course" value="1500"> SEWING (R1500)</label><br>
+    <label><input type="checkbox" id="childminding" name="course" value="750"> CHILD MINDING (R750)</label><br>
+    <label><input type="checkbox" id="cooking" name="course" value="750"> COOKING (R750)</label><br>
+    <label><input type="checkbox" id="lifeskills" name="course" value="1500"> LIFE SKILLS (R1500)</label><br>
 
     <button type="button" onclick="generateQuote()">Generate Quotation</button>
   </form>
 
-  <div id="quoteBox" style="display:none; margin-top:30px; border:2px solid #ccc; padding:20px; border-radius:10px;">
+  <!-- QUOTE BOX -->
+  <div id="quoteBox" style="display:none;">
     <h2>Quotation Summary</h2>
     <p><strong>Name:</strong> <span id="displayName"></span></p>
     <p><strong>Email:</strong> <span id="displayEmail"></span></p>
@@ -54,6 +197,7 @@
     <p><strong>Total Amount:</strong> R<span id="totalAmount">0</span></p>
   </div>
 
+  <!-- SCRIPT -->
   <script>
     function generateQuote() {
       let name = document.getElementById("name").value;
@@ -65,7 +209,7 @@
 
       checkboxes.forEach((checkbox) => {
         total += parseInt(checkbox.value);
-        selectedCourses.push(checkbox.nextElementSibling.textContent);
+        selectedCourses.push(checkbox.nextSibling.textContent.trim());
       });
 
       if (selectedCourses.length === 0) {

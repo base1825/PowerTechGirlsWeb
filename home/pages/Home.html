@@ -1,77 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Empowering The Nation</title>
-  <link rel="stylesheet" href="../style.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    /* ---------- RESET ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color:#0a3d15;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f8c145;
+    }
+
+    /* ---------- HERO ---------- */
+.hero {
+  height: 100vh;
+  background: url("../images/gold.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 34, 57, 0.7); /* optional overlay */
+  z-index: 1;
+}
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-text button {
+      background: #f8c145;
+      color:#0a3d15;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background: #fff;
+      color: #0a3d15;;
+    }
+
+    /* ---------- IMAGE BACKGROUND SECTION ---------- */
+    .image-bg {
+      height: 80vh;
+      background-color: #0a3d15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+
+    .image-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 34, 57, 0.6);
+      z-index: 1;
+    }
+
+    .image-bg-text {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .image-bg-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .image-bg-text p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .image-bg-text button {
+      background: #f8c145;
+      color: #0a3d15;;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .image-bg-text button:hover {
+      background: #fff;
+      color: #0a3d15;;
+    }
+
+    /* ---------- COURSE SECTION ---------- */
+    .course {
+      padding: 80px 8%;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .course h1 {
+      font-size: 2rem;
+      color: #0a3d15;;
+      margin-bottom: 50px;
+    }
+
+    .course-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      max-width: 320px;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .course-card h3 {
+      padding: 15px;
+      color: #0a3d15;;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* ---------- ABOUT US ---------- */
+    .about-us {
+      padding: 100px 8%;
+    }
+
+    .about-us h1 {
+      text-align: center;
+      color: #0a3d15;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .founder-img {
+      width: 300px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .btn-see-more {
+      background: #0a3d15;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-see-more:hover {
+      background: #f8c145;
+      color:#0a3d15;
+    }
+
+    /* ---------- TESTIMONIALS ---------- */
+    .testimonials {
+      background: #0a3d15;
+      color: #fff;
+      text-align: center;
+      padding: 100px 8%;
+    }
+
+    .testimonials h1 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-style: italic;
+    }
+
+    .testimonial i {
+      color: #f8c145;
+      font-size: 1.5rem;
+    }
+
+    /* ---------- VALUES ---------- */
+    .values {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .values h1 {
+      color:#0a3d15;
+      margin-bottom: 30px;
+    }
+
+    .values-list span {
+      background: #0a3d15;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 10px;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #0a3d15;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 50px 8%;
+    }
+
+    .footer-column {
+      margin: 15px 0;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      color: #f8c145;
+    }
+
+    .footer-column p {
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .footer-column input {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      width: 200px;
+    }
+
+    .footer-column button {
+      padding: 8px 20px;
+      background: #f8c145;
+      color:#0a3d15;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .footer-column button:hover {
+      background: #fff;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-text h2,
+      .image-bg-text h2 {
+        font-size: 2rem;
+      }
+
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-<body>
-  <!-- HEADER -->
-  <header class="hero">
-    <nav id="nav" class="nav">
-      <h1 class="logo">EMPOWERING THE NATION</h1>
-      <ul class="nav-links">
-       <nav class="nav">
- 
-  <ul class="nav-links">
-    
-    <li><a href="6month.html">Six-Month Courses</a></li>
-    <li><a href="6week.html">Six-Week Courses</a></li>
-    <li><a href="fees.html">Calculation</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="Enquiries.html">Donate</a></li>
-  </ul>
-</nav>
-      </ul>
-    </nav>
 
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <h1 class="logo">Empowering The Nation</h1>
+    <ul class="nav-links">
+      <li><a href="6month.html">Six-Month Courses</a></li>
+      <li><a href="6week.html">Six-Week Courses</a></li>
+      <li><a href="fees.html">Calculation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Enquiries.html">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
     <div class="hero-text">
       <h2>"Upskilling Today,<br> Empowering Tomorrow"</h2>
-      <p>We equip domestic workers and gardeners with practical training that makes them more employable, more confident, and better prepared to earn higher incomes or start their own businesses.</p>
+      <p>
+        We equip domestic workers and gardeners with practical training that
+        makes them more employable, more confident, and better prepared to earn
+        higher incomes or start their own businesses.
+      </p>
       <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
         <i class="fas fa-chevron-down"></i> Scroll to see more
       </button>
     </div>
   </header>
 
+  <!-- IMAGE BACKGROUND SECTION -->
+  <section class="image-bg">
+    <div class="image-bg-text">
+      <h2>Empowering Skills for a Brighter Future</h2>
+      <p>Join our courses and unlock your full potential today!</p>
+      <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
+        Explore Courses
+      </button>
+    </div>
+  </section>
+
   <!-- COURSES -->
-  <section class="course" >
+  <section class="course" id="courses">
+    <h1>Our Courses</h1>
     <div class="course-grid">
       <a href="6month.html" class="course-card">
-      <img src="images/garder.jpg" alt="6 month course">
-      <h3>Six-Month Courses</h3>
+        <img src="../images/garder.jpg" alt="6 month course" />
+        <h3>Six-Month Courses</h3>
       </a>
       <a href="6week.html" class="course-card">
-
-      <img src="images/aid.jpg" alt="6 week course">
-      <h3>Six-Week Courses</h3>
+        <img src="../images/aid.jpg" alt="6 week course" />
+        <h3>Six-Week Courses</h3>
       </a>
-    </div> 
+    </div>
   </section>
 
   <!-- ABOUT US -->
   <section class="about-us" id="about">
     <h1>About Us</h1>
     <div class="about-container">
-      <img src="images/rebede.jpg" alt="Founder Precious Radebe" class="founder-img">
+      <img src="../images/rebede.jpg" alt="Founder Precious Radebe" class="founder-img" />
       <div class="about-text">
         <p>
-          Founded by <strong>Precious Radebe</strong>, we empower domestic workers and gardeners 
-          with practical skills to boost employability, earn higher wages, and pursue entrepreneurial opportunities. 
+          Founded by <strong>Precious Radebe</strong>, we empower domestic
+          workers and gardeners with practical skills to boost employability,
+          earn higher wages, and pursue entrepreneurial opportunities.
           <span id="dots">...</span>
-          <span id="more">
-            Our training helps participants grow professionally while providing employers 
-            with more skilled, capable staff—transforming lives, one skill at a time. 
-            Our mission is to enhance employability and open up new opportunities for growth. 
-            By providing hands-on, marketable skills, we help domestic workers and gardeners increase their value in the job market, earn higher wages, and even pursue entrepreneurial ventures using their newly acquired expertise.
-            <br><br>
-            Through our comprehensive training programs, employers benefit from more skilled, professional, and capable staff, while participants gain the confidence and knowledge to elevate their careers. We are committed to transforming lives, one skill at a time, and fostering a community where talent is recognized, valued, and celebrated.
+          <span id="more" style="display: none;">
+            Our training helps participants grow professionally while providing
+            employers with more skilled, capable staff—transforming lives, one
+            skill at a time.
           </span>
         </p>
-        <button onclick="toggleAbout()" id="btn-see-more" class="btn-see-more">See More</button>
+        <button onclick="toggleAbout()" id="btn-see-more" class="btn-see-more">
+          See More
+        </button>
       </div>
     </div>
   </section>
@@ -109,6 +497,7 @@
       <p>EmpoweringThenation.com</p>
       <p>+27 356786687</p>
     </div>
+
     <div class="footer-column">
       <h3>Social Media</h3>
       <p>Instagram</p>
@@ -116,19 +505,19 @@
       <p>LinkedIn</p>
       <p>WhatsApp</p>
     </div>
+
     <div class="footer-column">
       <h3>Newsletter Sign-up</h3>
-      <input type="email" placeholder="Enter your email">
+      <input type="email" placeholder="Enter your email" />
       <button>Subscribe</button>
     </div>
   </footer>
 
-  <!-- SCRIPT -->
   <script>
     function toggleAbout() {
-      let dots = document.getElementById("dots");
-      let moreText = document.getElementById("more");
-      let btn = document.getElementById("btn-see-more");
+      const dots = document.getElementById("dots");
+      const moreText = document.getElementById("more");
+      const btn = document.getElementById("btn-see-more");
 
       if (dots.style.display === "none") {
         dots.style.display = "inline";

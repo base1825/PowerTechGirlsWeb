@@ -1,24 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Empowering The Nation</title>
+
+  <!-- Font Awesome (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .nav {
+      background-color: #0b2239;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      color: #4CAF50;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #4CAF50;
+    }
+
+    .form-section {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 1108px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 10px;
+      }
+
+      iframe {
+        height: 900px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="hero">
-    <nav id="nav" class="nav">
-      <h1 class="logo">EMPOWERING THE NATION</h1>
-      <ul class="nav-links">
-       <nav class="nav">
- 
-  <ul class="nav-links">
-    
-    <li><a href="6month.html">Six-Month Courses</a></li>
-    <li><a href="6week.html">Six-Week Courses</a></li>
-    <li><a href="fees.html">Calculation</a></li>
-    <li><a href="contact.html">Contact</a></li>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchWajfBC-j70bMC5szz_K1BaV3h_SwBtCAkj44Jay10gJClA/viewform?embedded=true" width="640" height="1108" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <h1 class="logo">EMPOWERING THE NATION</h1>
+    <ul class="nav-links">
+      <li><a href="6month.html">Six-Month Courses</a></li>
+      <li><a href="6week.html">Six-Week Courses</a></li>
+      <li><a href="fees.html">Calculation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <h2>Register Your Interest</h2>
+    <p>Please fill out the form below to get started:</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchWajfBC-j70bMC5szz_K1BaV3h_SwBtCAkj44Jay10gJClA/viewform?embedded=true" allowfullscreen loading="lazy">Loading…</iframe>
+  </section>
+
+</body>
+</html>
