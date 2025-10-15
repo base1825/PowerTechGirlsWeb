@@ -1,10 +1,10 @@
-PowerTechGirls – Empowering the Nation
+## PowerTechGirls – Empowering the Nation
 
 PowerTechGirls is a website designed to upskill domestic workers and gardeners, helping them become more employable and better compensated. The platform promotes entrepreneurship, self-sustainability, and community empowerment by providing accessible training and digital tools.
 
 The website bridges the gap between education, employment, and technology, allowing learners and employers to explore courses, generate quotations, and access training services conveniently.
 
-Features
+## Features
 1. User Authentication
 
 Secure login and registration forms.
@@ -65,7 +65,7 @@ Optimized for multiple screen sizes and modern browsers.
 
 Clean, readable layouts and well-defined buttons for a professional look.
 
-How to Run the Website
+## How to Run the Website
 1. Download the project
 
 Clone or download the website folder to your local machine.
@@ -92,11 +92,10 @@ HTML – Website structure and content.
 
 CSS – Styling and layout design.
 
-JavaScript (if used) – Dynamic interactions like the cart and quotation generator.
 
 Google Maps API – Shows the training center location.
 
-Design Considerations
+## Design Considerations
 
 The website’s design reflects empowerment, growth, and professionalism:
 
@@ -110,7 +109,7 @@ Layout designed for accessibility and ease of navigation.
 
 Adequate spacing, readable fonts, and consistent button styles enhance the user experience.
 
-Group Members
+## Group Members
 
 Laicah Banda [ST10493996]
 
@@ -118,4 +117,4 @@ Base Irene Mudimbi [ST10487874]
 
 Kganya Mashegaoana [ST10480736]
 
- Screenshots
+ ## Screenshots.
