@@ -1,40 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Empowering The Nation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      background-color: rgba(10, 61, 21, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 5%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links li a:hover {
+      color: #ffb400;
+    }
+
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffb400;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .contact h1 {
+      color: #0a3d15;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* INDIVIDUAL LOCATION FRAME */
+    .location-frame {
+      border: 3px solid #ffb400;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .location-details {
+      background-color: #0a3d15;
+      color: #fff;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .location-details p {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .location-details a {
+      color: #ffb400;
+      text-decoration: underline;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    /* GRID LAYOUT */
+    .map-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .map-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
-<header>
-     <nav id="nav" class="nav">
-         <ul class="nav-links">
-    <li><a href="code.html">Home</a></li>
-    <li><a href="6month.html">Six-Month Courses</a></li>
-    <li><a href="6week.html">Six-Week Courses</a></li>
-    <li><a href="fees.html">Calculation</a></li>
-    
-     </nav>
-  
-   
-  </ul>
-  /
-</header>
+
 <body>
-    <h1>CONTACT</h1>
-    <p>phone: +27125456789</p>
-    <p>email:Info@empoweringthenation.co.za</p>
-    <p>address:123 Main Road, Johannesburg, South Africa</p>
-    <p>456 Oak Ave.Johannesburg, South Africa</p>
-    <p>789 Pine St. Johannesburg, South Africa</p>
-    <div class="map container">
-        <h2>Find us here</h2>
-        <iframe src="https://maps.app.goo.gl/uL7XJGNWhsMAmjz1A" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe src="https://maps.app.goo.gl/Hf4z3LzMuVnsiMse6" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe src="https://maps.app.goo.gl/Hz5S9YT5qJgLbm1q9" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="6week.html">Six-Week Courses</a></li>
+        <li><a href="6month.html">Six-Month Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiries.html">Enquiries</a></li>
+        <li><a href="quotation.html">Quotation</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h1>Contact Us</h1>
+
+    <div class="map-container">
+
+      <!-- Location 1 -->
+      <div class="location-frame">
+        <div class="location-details">
+          <p><i class="fa-solid fa-phone"></i> +27 11 123 4567</p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info1@empoweringthenation.co.za">info1@empoweringthenation.co.za</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> 15 Rivonia Rd, Sandton, Johannesburg</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.1120989318523!2d28.05021711507668!3d-26.109689783454604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950dcd9f4f0e21%3A0x123456789abc!2s15+Rivonia+Rd%2C+Sandton%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1697200000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <!-- Location 2 -->
+      <div class="location-frame">
+        <div class="location-details">
+          <p><i class="fa-solid fa-phone"></i> +27 11 234 5678</p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info2@empoweringthenation.co.za">info2@empoweringthenation.co.za</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> 89 Oxford Rd, Houghton, Johannesburg</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.8765432109876!2d28.04119711507668!3d-26.123456783454604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950dcd6a1b2c3d%3A0xabcdef123456!2s89+Oxford+Rd%2C+Houghton%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1697200000001!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <!-- Location 3 -->
+      <div class="location-frame">
+        <div class="location-details">
+          <p><i class="fa-solid fa-phone"></i> +27 11 345 6789</p>
+          <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info3@empoweringthenation.co.za">info3@empoweringthenation.co.za</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> 50 West St, Braamfontein, Johannesburg</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.9876543210987!2d28.04000011507668!3d-26.135790783454604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950dcdabcdef12%3A0xabcdefabcdef!2s50+West+St%2C+Braamfontein%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1697200000002!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
     </div>
   </section>
-
 </body>
 </html>

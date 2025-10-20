@@ -1,67 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empowering The Nation</title>
-
-  <!-- Font Awesome (optional) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empowering The Nation | Enquiries</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    body {
+    /* RESET & BASE */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: "Poppins", sans-serif;
-      background-color: #ffffff;
-      color: #333;
     }
 
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
     .nav {
-      background-color: #0b2239;
+      background-color: rgba(10, 61, 21, 0.95);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 8%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      color: #4CAF50;
-      font-size: 1.4rem;
+      color: #ffb400;
+      font-size: 1.6rem;
       font-weight: 600;
+      letter-spacing: 1px;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
       gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .nav-links li a {
       color: #fff;
       font-weight: 500;
-      text-decoration: none;
       transition: color 0.3s ease;
+      position: relative;
     }
 
     .nav-links li a:hover {
-      color: #4CAF50;
+      color: #ffb400;
     }
 
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ffb400;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 4px solid #ffb400;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #0a3d15;
+    }
+
+    /* FORM SECTION */
     .form-section {
       padding: 60px 8%;
+      max-width: 900px;
+      margin: 50px auto;
       text-align: center;
+      border: 3px solid #ffb400; /* golden outline */
+      border-radius: 15px;
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h3 {
+      color: #0a3d15;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .form-section p {
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      color: #333;
     }
 
     iframe {
       width: 100%;
-      max-width: 640px;
-      height: 1108px;
-      border: none;
+      max-width: 700px;
+      height: 1100px;
+      border: 3px solid #ffb400; /* golden border for the form frame */
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav {
         flex-direction: column;
@@ -74,6 +136,10 @@
         margin-top: 10px;
       }
 
+      .hero h2 {
+        font-size: 2rem;
+      }
+
       iframe {
         height: 900px;
       }
@@ -84,19 +150,28 @@
 
   <!-- NAVIGATION -->
   <nav class="nav">
-    <h1 class="logo">EMPOWERING THE NATION</h1>
+    <h1 class="logo">Empowering The Nation</h1>
     <ul class="nav-links">
-      <li><a href="6month.html">Six-Month Courses</a></li>
+      <li><a href="home.html">Home</a></li>
       <li><a href="6week.html">Six-Week Courses</a></li>
-      <li><a href="fees.html">Calculation</a></li>
+      <li><a href="6month.html">Six-Month Courses</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="enquiries.html">Enquiries</a></li>
+      <li><a href="quotation.html">Quotation</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
     </ul>
   </nav>
 
+  <!-- HERO -->
+  <header class="hero">
+    <h2>Register Your Interest</h2>
+  </header>
+
   <!-- FORM SECTION -->
   <section class="form-section">
-    <h2>Register Your Interest</h2>
-    <p>Please fill out the form below to get started:</p>
+    <h3>Fill Out the Form Below</h3>
+    <p>Please provide your details and we’ll be in touch soon.</p>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchWajfBC-j70bMC5szz_K1BaV3h_SwBtCAkj44Jay10gJClA/viewform?embedded=true" allowfullscreen loading="lazy">Loading…</iframe>
   </section>
 

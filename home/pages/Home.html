@@ -1,228 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Empowering The Nation</title>
-  <link rel="stylesheet" href="../style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Empowering The Nation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <h1 class="logo">Empowering The Nation</h1>
-    <ul class="nav-links">
-      <li><a href="6month.html">Six-Month Courses</a></li>
-      <li><a href="6week.html">Six-Week Courses</a></li>
-      <li><a href="fees.html">Calculation</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Enquiries.html">Donate</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-text">
-      <h2>"Upskilling Today,<br> Empowering Tomorrow"</h2>
-      <p>
-        We equip domestic workers and gardeners with practical training that
-        makes them more employable, more confident, and better prepared to earn
-        higher incomes or start their own businesses.
-      </p>
-      <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
-        <i class="fas fa-chevron-down"></i> Scroll to see more
-      </button>
-    </div>
-  </header>
-
-  <!-- IMAGE BACKGROUND SECTION -->
-  <section class="image-bg">
-    <div class="image-bg-text">
-      <h2>Empowering Skills for a Brighter Future</h2>
-      <p>Join our courses and unlock your full potential today!</p>
-      <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
-        Explore Courses
-      </button>
-    </div>
-  </section>
-
-  <!-- COURSES -->
-  <section class="course" id="courses">
-    <h1>Our Courses</h1>
-    <div class="course-grid">
-      <a href="6month.html" class="course-card">
-        <img src="../images/garder.jpg" alt="6 month course" />
-        <h3>Six-Month Courses</h3>
-      </a>
-      <a href="6week.html" class="course-card">
-        <img src="../images/aid.jpg" alt="6 week course" />
-        <h3>Six-Week Courses</h3>
-      </a>
-    </div>
-  </section>
-
-  <!-- ABOUT US -->
-  <section class="about-us" id="about">
-    <h1>About Us</h1>
-    <div class="about-container">
-      <img src="../images/rebede.jpg" alt="Founder Precious Radebe" class="founder-img" />
-      <div class="about-text">
-        <p>
-         <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empowering Domestic Workers & Gardeners</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
-    /* Style for the text and button */
-    .empowerment-program {
-      font-family: Arial, sans-serif;
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #333;
       line-height: 1.6;
-      margin: 20px;
     }
-
-    #more {
-      display: none;
-    }
-
-    /* Styling for the See More button */
-    #see-more-btn {
-      color: #27b964;
-      cursor: pointer;
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    #see-more-btn:hover {
-      color: #022207;
+    a {
       text-decoration: none;
+      color: inherit;
     }
 
-    /* Optional: Add a smooth transition for text visibility */
-    #more {
-      transition: all 0.3s ease-in-out;
+    /* NAVIGATION */
+    .nav {
+      background-color: #0b2239;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 8%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo {
+      color: #4CAF50;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: #4CAF50;
+    }
+
+    /* HERO / BANNER */
+    .hero {
+      height: 35vh;
+      background: #0a3d15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffb400;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    /* ABOUT US SECTION */
+    .about-us {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px 8%;
+      background-color: rgba(10, 61, 21, 0.05);
+      border: 2px solid #ffb400;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .about-us h1 {
+      color: #ffb400;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+    .about-us p {
+      font-size: 1.1rem;
+      color: #0b2239;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0b2239;
+      color: #fff;
+      text-align: center;
+      padding: 40px 8%;
+      margin-top: 60px;
+    }
+    footer p {
+      margin-bottom: 15px;
+    }
+    footer a {
+      color: #ffb400;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    footer .social-icons a {
+      margin: 0 5px;
+      color: #ffb400;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 10px;
+      }
+      .about-us {
+        padding: 30px 5%;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="empowerment-program">
-    <h2>Empowering Domestic Workers & Gardeners</h2>
-    <p>Founded by <strong>Precious Radebe</strong>, our organization is committed to empowering domestic workers and gardeners by providing them with the practical skills necessary to thrive in an ever-evolving job market. Our primary goal is to enhance employability, facilitate access to higher-paying opportunities, and help individuals pursue entrepreneurial ventures that lead to greater financial independence and security.</p>
 
-    <p>We recognize that the domestic work and gardening sectors are vital to the smooth running of households and businesses, yet often, these workers face limited access to training and development. Our comprehensive training programs are designed to address this gap by offering participants specialized skills that not only improve their work performance but also increase their chances of securing stable, well-paid jobs. Whether it’s through advanced cleaning techniques, landscaping design, or effective communication skills, our training equips domestic workers and gardeners with the tools they need to succeed.</p>
- <div id="more">
-    <p>One of the key benefits of our initiative is the ability to provide participants with marketable skills that are in demand across various industries. As the workforce becomes more competitive, having specialized knowledge can make all the difference in job security and career advancement. Through our courses, we enable workers to improve their chances of earning a higher wage, thus improving their financial standing and the well-being of their families.</p>
+  <!-- NAVIGATION BAR -->
+  <nav class="nav">
+    <h1 class="logo">Empowering The Nation</h1>
+    <ul class="nav-links">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="6month.html">Six-Month Courses</a></li>
+      <li><a href="6week.html">Six-Week Courses</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="Enquiries.html">Enquiries</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html">Sign Up / Login</a></li>
+    </ul>
+  </nav>
 
-    <p>But our impact doesn’t stop with individual workers-it extends to employers as well. By offering training that enhances the skill set of workers, we provide employers with access to more capable and reliable staff. This creates a win-win situation where both the employer and employee benefit. Employers gain employees who are better equipped to handle their responsibilities with efficiency, attention to detail, and professionalism. In return, workers have more opportunities for career growth and job satisfaction, leading to a more positive work environment overall.</p>
-
-    <!-- Hidden additional text -->
-   
-      <p>The transformation that occurs through our training extends beyond just professional development-it is a life-changing experience. The knowledge and confidence gained through our programs empower individuals to take control of their futures, pursue entrepreneurial ventures, and become more self-reliant. We envision a future where domestic workers and gardeners are valued not just for their labor, but for their expertise and skills, and where these workers have access to the same opportunities for growth and prosperity as any other professional.</p>
-
-      <p>Our commitment to transformation is rooted in the belief that when individuals are given the opportunity to learn and grow, they can break the cycle of poverty and create better lives for themselves and their families. Every day, we witness the impact of our training programs as they help individuals become more than just workers-they become professionals with pride in their work and the skills to succeed.</p>
-
-      <p>Through our organization, we are helping to change the narrative surrounding domestic work and gardening. These professions are essential, and through our training, we are providing workers with the recognition, respect, and opportunities they deserve. By changing lives, one skill at a time, we are contributing to a future where every worker has the tools they need to succeed, regardless of their background or previous opportunities.</p>
-    </div>
-
-    <!-- Button to show more -->
-    <p><span id="see-more-btn" onclick="toggleText()">See More</span></p>
+  <!-- HERO / PAGE BANNER -->
+  <div class="hero">
+    <h1>About Us</h1>
   </div>
 
-  <script>
-    // Function to toggle the visibility of the extra content
-    function toggleText() {
-      var moreText = document.getElementById("more");
-      var seeMoreBtn = document.getElementById("see-more-btn");
-
-      if (moreText.style.display === "none") {
-        moreText.style.display = "block";
-        seeMoreBtn.textContent = "See Less";  // Change button text to "See Less"
-      } else {
-        moreText.style.display = "none";
-        seeMoreBtn.textContent = "See More";  // Change button text back to "See More"
-      }
-    }
-  </script>
-</body>
-</html>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
-    <h1>What People Say</h1>
-    <div class="testimonial">
-      <i class="fas fa-quote-left"></i>
-      <p>"The courses offered here have transformed my career. The instructors are top-notch and the content is always relevant."</p>
-      <h4>- Alex Johnson</h4>
-    </div>
-    <div class="testimonial">
-      <i class="fas fa-quote-left"></i>
-      <p>"I never thought I could learn so much in such a short time. The hands-on approach made all the difference."</p>
-      <h4>- Maria Garcia</h4>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section class="values">
-    <h1>We are proud of our values</h1>
-    <div class="values-list">
-      <span>#Empowering</span>
-      <span>#Growth</span>
-      <span>#Opportunity</span>
-      <span>#Community</span>
-    </div>
+  <!-- ABOUT US SECTION -->
+  <section class="about-us">
+    <h1>About Us</h1>
+    <p>
+      Founded by <strong>Precious Radebe</strong>, our organization empowers domestic workers and gardeners with practical skills to succeed in the job market. 
+      We provide advanced training in cleaning, landscaping, life skills, and entrepreneurship to help workers secure better-paying jobs and opportunities. 
+      Our programs also benefit employers by supplying skilled, confident, and reliable staff.
+    </p>
   </section>
 
   <!-- FOOTER -->
-  <footer id="footer">
-    <div class="footer-column">
-      <h3>Contact Info</h3>
-      <p>EmpoweringThenation.com</p>
-      <p>+27 356786687</p>
-    </div>
-
-    <div class="footer-column">
-      <h3>Social Media</h3>
-      <p>Instagram</p>
-      <p>Facebook</p>
-      <p>LinkedIn</p>
-      <p>WhatsApp</p>
-    </div>
-
-    <div class="footer-column">
-      <h3>Newsletter Sign-up</h3>
-      <input type="email" placeholder="Enter your email" />
-      <button>Subscribe</button>
-    </div>
+  <footer>
+    <p>&copy; 2025 <strong>Empowering The Nation</strong>. All rights reserved.</p>
+    <p>
+      <a href="Home.html">Home</a> |
+      <a href="6month.html">Six-Month Courses</a> |
+      <a href="6week.html">Six-Week Courses</a> |
+      <a href="registration.html">Registration</a> |
+      <a href="Enquiries.html">Enquiries</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p class="social-icons">
+      Follow us: 
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </p>
   </footer>
 
-  <script>
-    function toggleAbout() {
-      const dots = document.getElementById("dots");
-      const moreText = document.getElementById("more");
-      const btn = document.getElementById("btn-see-more");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btn.innerHTML = "See More";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btn.innerHTML = "See Less";
-        moreText.style.display = "inline";
-      }
-    }
-  </script>
 </body>
 </html>
+

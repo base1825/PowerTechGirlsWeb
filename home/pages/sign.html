@@ -1,43 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPOWERING THE NATION</title>
-        <link rel="stylesheet" href="../style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+<!-- NAVIGATION BAR -->
+<nav class="nav">
+  <h1 class="logo">Empowering The Nation</h1>
+  <ul class="nav-links">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="6month.html">Six-Month Courses</a></li>
+    <li><a href="6week.html">Six-Week Courses</a></li>
+    <li><a href="registration.html">Registration</a></li>
+    <li><a href="Enquiries.html">Enquiries</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="signup.html">Sign Up / Login</a></li>
+  </ul>
+</nav>
 
-    <nav id="nav" class="nav">
-      <ul class="nav-links">    
-    <li><a href="code.html">Home</a></li>
-    </ul>
-  </nav>
+<style>
+.nav {
+  background-color: #0b2239;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Sign Up</h1>
-  </header>
+.logo {
+  color: #ffb400; /* golden accent */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-  <!-- FORM SECTION -->
-  <section class="form-section">
-    <h2>Create Your Account</h2>
-    <form action="submit_form.php" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+.nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
+.nav-links li a:hover {
+  color: #ffb400; /* golden hover */
+}
 
-      <input type="submit" value="Submit">
-    </form>
-
-    <p>Already have an account? <a href="#">Sign in</a></p>
-  </section>
-
-</body>
-</html>
+/* Responsive menu */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+  }
+}
+</style>
