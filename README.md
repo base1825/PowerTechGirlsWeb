@@ -120,10 +120,34 @@ Kganya Mashegaoana [ST10480736]
  ## Screenshots.
  # Homepage:
  <img width="1317" height="635" alt="image" src="https://github.com/user-attachments/assets/cf1859f8-c474-488d-8a94-b91d93a4b05f" />
- # Footer of homepage:
+ ##Footer of homepage:
  <img width="1345" height="201" alt="image" src="https://github.com/user-attachments/assets/5e2217c2-e084-49ab-a5d5-ea96b3fd65b1" />
- # 6 Month Courses:
+ ##6 Month Courses:
  <img width="1350" height="638" alt="image" src="https://github.com/user-attachments/assets/ac6c35a3-56a5-4dc1-89b2-fed607bafe8a" />
+ ## Week Courses:
+ <img width="1362" height="621" alt="image" src="https://github.com/user-attachments/assets/8741e64c-5e1c-4d21-81d1-08cc4657d493" />
+ ## Child Minding:
+ <img width="1332" height="626" alt="image" src="https://github.com/user-attachments/assets/84e530c8-2755-4058-88ae-fb2d822cfb90" />
+ ## Life Skills:
+ <img width="1365" height="593" alt="image" src="https://github.com/user-attachments/assets/c1b6e12a-3532-488b-b3fc-eaa0a343c249" />
+ ## Cooking: 
+ <img width="1352" height="615" alt="image" src="https://github.com/user-attachments/assets/f318f638-dd2d-436d-93cf-de35bbdc3ba5" />
+ ## Maintanance:
+ <img width="1359" height="572" alt="image" src="https://github.com/user-attachments/assets/1d74881e-95f0-4f46-8611-d82622b8a387" />
+ ## Sewing: 
+ <img width="1249" height="624" alt="image" src="https://github.com/user-attachments/assets/0a16081a-4e0c-48a2-9259-f7e67357a2d7" />
+ ## Landscaping: 
+ <img width="1343" height="625" alt="image" src="https://github.com/user-attachments/assets/75350625-66f0-44f5-ba83-3e4ee8024297" />
+ ## First Aid: 
+ <img width="1282" height="623" alt="image" src="https://github.com/user-attachments/assets/ab106d64-a547-4386-b5c4-b5d5ad2f30d5" />
+ ## Contact :
+ <img width="1338" height="624" alt="image" src="https://github.com/user-attachments/assets/1b8a423e-7756-42cd-9791-d78a80e75f7d" />
+ ## Enquires: 
+ <img width="1319" height="605" alt="image" src="https://github.com/user-attachments/assets/5b3c77d3-b935-4245-a7ee-ca93941564a3" />
+ ## Sign In:
+ <img width="1348" height="606" alt="image" src="https://github.com/user-attachments/assets/729b4783-75da-4832-b464-aa616a907cba" />
+ ## Qoutation:
+<img width="1351" height="600" alt="image" src="https://github.com/user-attachments/assets/0fa460ee-9571-4990-9bf9-c920a2cba9a8" />
 
 
 
