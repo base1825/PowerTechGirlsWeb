@@ -118,3 +118,12 @@ Base Irene Mudimbi [ST10487874]
 Kganya Mashegaoana [ST10480736]
 
  ## Screenshots.
+ # Homepage:
+ <img width="1317" height="635" alt="image" src="https://github.com/user-attachments/assets/cf1859f8-c474-488d-8a94-b91d93a4b05f" />
+ # Footer of homepage:
+ <img width="1345" height="201" alt="image" src="https://github.com/user-attachments/assets/5e2217c2-e084-49ab-a5d5-ea96b3fd65b1" />
+ # 6 Month Courses:
+ <img width="1350" height="638" alt="image" src="https://github.com/user-attachments/assets/ac6c35a3-56a5-4dc1-89b2-fed607bafe8a" />
+
+
+
